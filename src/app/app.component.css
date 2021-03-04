@@ -1,0 +1,19 @@
+.ui {
+  padding: 15px;
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+.navigation {
+  margin-bottom: 25px;
+}
+
+.navigation a {
+  display: inline-block;
+  text-decoration: none;
+  margin-right: 15px;
+}
+
+.router-link-active {
+  color: brown;
+}

@@ -1,0 +1,10 @@
+<mat-expansion-panel>
+  <mat-expansion-panel-header>
+    <mat-panel-title>
+      Export events list
+    </mat-panel-title>
+  </mat-expansion-panel-header>
+
+  <app-event-tracker-list-renderer [events]="exportEvents$ | async"></app-event-tracker-list-renderer>
+
+</mat-expansion-panel>
