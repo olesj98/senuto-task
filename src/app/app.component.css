@@ -12,6 +12,7 @@
   display: inline-block;
   text-decoration: none;
   margin-right: 15px;
+  font-weight: 500;
 }
 
 .router-link-active {
