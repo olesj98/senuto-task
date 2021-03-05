@@ -1,6 +1,6 @@
 import { Inject, Injectable } from '@angular/core';
-import { Observable, timer } from 'rxjs';
-import { first, retryWhen, switchMap } from 'rxjs/operators';
+import { Observable } from 'rxjs';
+import { delay, retryWhen } from 'rxjs/operators';
 import { webSocket, WebSocketSubject } from 'rxjs/webSocket';
 
 import { WsEvent } from '../models/ws-event';
@@ -19,9 +19,7 @@ export class WsService {
     return this.socket$.asObservable()
       .pipe(
         retryWhen(errors$ => errors$
-          .pipe(switchMap(() => timer(1000)
-            .pipe(first())
-          ))
+          .pipe(delay(1000))
         )
       );
   }
